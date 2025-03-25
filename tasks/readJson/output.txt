@@ -1,0 +1,5 @@
+Имя: John Smith, Возраст: 25
+Имя: Anna Brown, Возраст: 30
+Имя: Mike Johnson, Возраст: 45
+Имя: Sarah Wilson, Возраст: 28
+Имя: David Miller, Возраст: 35

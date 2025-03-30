@@ -1,4 +1,4 @@
-package combineSlice
+package main
 
 import (
 	"github.com/stretchr/testify/assert"
@@ -13,8 +13,8 @@ func TestSumSlices(t *testing.T) {
 	a.Equal([]int{2, 4, 3}, sumSlices([]int{1, 2}, []int{1, 2, 3}))
 
 	a.Equal([]int{}, sumSlices([]int{}, []int{}))
-	a.Equal([]int{}, sumSlices([]int{}, []int{1, 2}))
-	a.Equal([]int{}, sumSlices([]int{1, 2}, []int{}))
+	a.Equal([]int{1, 2}, sumSlices([]int{}, []int{1, 2}))
+	a.Equal([]int{1, 2}, sumSlices([]int{1, 2}, []int{}))
 
 	a.Nil(sumSlices(nil, []int{1, 2}))
 	a.Nil(sumSlices([]int{1, 2}, nil))

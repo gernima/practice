@@ -1,4 +1,4 @@
-﻿package main
+package main
 
 import (
 	"encoding/json"
@@ -11,7 +11,7 @@ type Person struct {
 	Age  int
 }
 
-func PrintPerson(p Person) string {
+func printPerson(p Person) string {
 	return fmt.Sprintf("Имя: %s, Возраст: %d", p.Name, p.Age)
 }
 
@@ -37,7 +37,7 @@ func main() {
 	defer outputFile.Close()
 
 	for _, person := range persons {
-		result := PrintPerson(person)
+		result := printPerson(person)
 		fmt.Println(result)
 
 		_, err := outputFile.WriteString(result + "\n")

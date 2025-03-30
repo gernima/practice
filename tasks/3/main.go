@@ -1,17 +1,17 @@
-﻿package main
+package main
 
 import "fmt"
 
 type Person struct {
 	Name string
-	Age int
+	Age  int
 }
 
-func PrintPerson(p Person) {
+func printPerson(p Person) {
 	fmt.Printf("Имя: %s, Возраст: %d\n", p.Name, p.Age)
 }
 
 func main() {
 	p := Person{Name: "Иван", Age: 30}
-	PrintPerson(p)
+	printPerson(p)
 }

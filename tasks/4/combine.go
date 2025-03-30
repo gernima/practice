@@ -1,16 +1,20 @@
 package main
 
 func sumSlices(s1, s2 []int) []int {
-	if s1 == nil || s2 == nil {
+	if s1 == nil && s2 == nil {
 		return nil
 	}
 
-	if len(s1) == 0 {
-		return append([]int{}, s2...)
+	if s1 == nil || len(s1) == 0 {
+		result := make([]int, len(s2))
+		copy(result, s2)
+		return result
 	}
 
-	if len(s2) == 0 {
-		return append([]int{}, s1...)
+	if s2 == nil || len(s2) == 0 {
+		result := make([]int, len(s1))
+		copy(result, s1)
+		return result
 	}
 
 	maxLen := len(s1)

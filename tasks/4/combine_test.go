@@ -16,9 +16,9 @@ func TestSumSlices(t *testing.T) {
 	a.Equal([]int{1, 2}, sumSlices([]int{}, []int{1, 2}))
 	a.Equal([]int{1, 2}, sumSlices([]int{1, 2}, []int{}))
 
-	a.Nil(sumSlices(nil, []int{1, 2}))
-	a.Nil(sumSlices([]int{1, 2}, nil))
-	a.Nil(sumSlices(nil, nil))
+	a.Equal([]int{1, 2}, sumSlices(nil, []int{1, 2}))
+	a.Equal([]int{1, 2}, sumSlices([]int{1, 2}, nil))
+	a.Equal([]int(nil), sumSlices(nil, nil))
 
 	a.Equal([]int{0, 0}, sumSlices([]int{-1, 2}, []int{1, -2}))
 
